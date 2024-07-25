@@ -1,0 +1,114 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mdframed}
+\usepackage{hyperref}
+\usepackage{amsthm}
+
+\marksnotpoints
+\pointsinrightmargin
+\bracketedpoints
+\printanswers
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue,
+  pdfpagemode=FullScreen,
+}
+
+\urlstyle{same}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Pre Calc Prep}{Trig PSET}{Shah}
+\runningheader{}{Trig}{}
+\firstpagefooter{}{}{}
+\runningfooter{ }{\thepage}{ }
+
+\begin{document}
+  \vspace{1in}
+
+  \noindent\makebox[\textwidth]{Name:\enspace\hrulefill}
+
+  \vspace{.1in}
+
+  \begin{center}
+      \fbox{\fbox{\parbox{5.5in}{\centering
+      Answer the questions in the spaces provided on the following pages.  If you run out of room for an answer, continue on the back of the page. Show \textbf{all} your work!}}}
+  \end{center}
+
+  \begin{questions}
+    \question Prove the following identity: $\displaystyle\, \frac{\sec^2 x}{\sec^2 x - 1} = \csc^2 x$ 
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+         \csc^2 x &= \frac{\sec^2 x}{\sec^2 x - 1} \\ 
+         &= \frac{\sec^2 x}{\tan^2 x} \\ 
+         &= \sec^2 x \cot^2 x \\ 
+         &= \frac{1}{\cos^2 x} \frac{\cos^2 x}{\sin^2 x} \\ 
+         &= \frac{1}{\sin^2 x} \\ 
+         &= \csc^2 x
+      \end{align*}
+    \end{solution}
+
+    \question Prove the following identity: $\displaystyle\, \csc^2 x \tan^2 x - 1 = \tan^2 x$
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+        \tan^2 x &= \csc^2 x \tan^2 x - 1 \\ 
+        &= \frac{1}{\sin^2 x}\frac{\sin^2 x}{\cos^2 x} - 1 \\ 
+        &= \frac{1}{\cos^2 x} - 1 \\ 
+        &= \sec^2 x - 1 \\ 
+        &= \tan^2 x
+      \end{align*}
+    \end{solution}
+
+    \newpage
+
+    \question Prove the following identity: $\displaystyle\, \tan^2 x \sin^2 x = \tan^2 x - \sin^2 x$ 
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+        \tan^2 x \sin^2 x &= \tan^2 x - \sin^2 x \\ 
+        &= \tan^2 x - \sin^2 x \left(\frac{\cos^2 x}{\cos^2 x}\right) \\ 
+        &= \tan^2 x - \frac{\left(\sin^2 x\right)\left(\cos^2 x\right)}{\cos^2 x} \\ 
+        &= \tan^2 x - \frac{\sin^2 x}{\cos^2 x}\left(\cos^2 x\right) \\ 
+        &= \tan^2 x - \tan^2 x \cos^2 x \\ 
+        &= \tan^2 x \left(1 - \cos^2 x\right) \\ 
+        &= \tan^2 x \sin^2 x
+      \end{align*}
+    \end{solution}
+
+    \question Prove the following identity: $\displaystyle\, \frac{\cos x + 1}{\sin^3 x} = \frac{\csc x}{1-\cos x}$ 
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+        \frac{\cos x + 1}{\sin^3 x} &= \frac{\csc x}{1 - \cos x} \\
+        &= \frac{1}{\sin x}\frac{\cos x + 1}{\sin ^2 x} \\ 
+        &= \left(\csc x\right)\frac{\cos x + 1}{1 - \cos^2 x} \\ 
+        &= \left(\csc x\right)\frac{\cos x + 1}{\left(1 - \cos x\right)\left(1 + \cos x\right)} \\ 
+        &= \left(\csc x\right)\frac{1}{1 - \cos x} \\ 
+        &= \frac{\csc x}{1 - \cos x}
+      \end{align*}
+    \end{solution}
+
+    \newpage
+
+    \question \textbf{Bonus \underline{extra hard} question:} Prove the following identity: $\displaystyle\, \frac{1 + \tan^2 x}{\sec x} = \sqrt{\frac{1}{\frac{1}{2}\left(1 - \cos(2x)\right)}}$ 
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+        \frac{1 + \tan^2 x}{\sec x} &= \sqrt{\frac{1}{\frac{1}{2}\left(1 - \cos(2x)\right)}} \\ 
+        \frac{1 + \tan^2 x}{\sec x} &= \sqrt{\frac{1}{2 - 1 - \cos(2x)}} \\ 
+        \frac{1 + \tan^2 x}{\sec x} &= \sqrt{\frac{1}{\frac{1}{2}\left(2 - 1 - \cos(2x)\right)}} \\ 
+        \frac{1 + \tan^2 x}{\sec x} &= \sqrt{\frac{1}{1 - \frac{1 - \cos(2x)}{2}}} \\ 
+        \frac{1 + \tan^2 x}{\sec x} &= \sqrt{\frac{1}{1 - \sin^2 x}} \\ 
+        \frac{1 + \tan^2 x}{\sec x} &= \sqrt{\frac{1}{\cos^2 x}} \\ 
+        \frac{1 + \tan^2 x}{\sec x} &= \sqrt{\sec^2 x} \\ 
+        \frac{\sec^2 x}{\sec x} &= \sec x \\ 
+        \sec x &= \sec x
+      \end{align*}
+    \end{solution}
+  \end{questions}
+\end{document}

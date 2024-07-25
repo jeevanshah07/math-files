@@ -371,7 +371,8 @@
         \noindent\makebox[\linewidth]{\hrulefill}
         \vspace{0.1in}
         \newline\Large\textbf{Proving Identities}
-        \newline\normalsize Use known trig identities and definitions to prove the following:
+        \newline\normalsize When verifying trig identities its important to remember one key rule: \textbf{you cannot treat them as equations!!!} What this means is that you can't move terms from one side to another in order to reach a true statment, instead you must manipulate each side individually and independently until you can reach an equality by showing that both the left hand side and the right hand side of the equal sign are equivalent to the same quantity. 
+        \newpage Now, for some practice use known trig identities and definitions to prove the following:
         \begin{questions}
             \question \(\displaystyle\, \frac{\sec x}{\cos x} - \frac{\tan x}{\cot x} = 1\)
             \begin{solution}[\stretch{1}]
@@ -388,16 +389,13 @@
             \question \(\displaystyle\, \sec(x)-\tan(x)\sin(x) = \frac{1}{\sec(x)}\)
             \begin{solution}[\stretch{1}]
                \begin{align*}
-                   \sec(x)-\tan(x)\sin(x) &= \frac{1}{\sec(x)} \\ 
-                   \sec(x) &= \frac{1}{\sec(x)} + \tan(x)\sin(x) \\ 
-                   \sec(x) - \frac{1}{\sec(x)} &= \tan(x)\sin(x) \\ 
-                   \sec(x)\left(\sec(x) - \frac{1}{\sec(x)}\right) &= \left(\tan(x)\sin(x)\right)\sec(x) \\ 
-                   \sec^2(x) - 1 &= \left(\frac{\sin(x)}{\cos(x)}\right)\left(\sin(x)\right)\left(\frac{1}{\cos(x)}\right) \\
-                   \sec^2(x) - 1 &= \frac{\sin^2(x)}{\cos^2(x)} \\
-                   \sec^2(x) - 1 &= \tan^2(x) \\ 
-                   \sec^2(x) &= \tan^2(x) + 1
+                 \sec x - \tan x \sin x &= \frac{1}{\sec x} \\ 
+                 \frac{1}{\cos x} - \frac{\sin x}{\cos x}\sin x &= \frac{1}{\sec x} \\ 
+                 \frac{1}{\cos x} \left(1 - \sin^2 x\right) &= \frac{1}{\sec x} \\ 
+                 \frac{1}{\cos x}\left(\cos^2 x\right) &= \frac{1}{\sec x} \\ 
+                 \cos x &= \frac{1}{\sec x} \\ 
+                 \frac{1}{\sec x} &= \frac{1}{\sec x}
                \end{align*}
-               And so, by manipulating the original identity into an identity we know to be true, we can accept that the original identity is also true. 
             \end{solution}
 
             \question \(\displaystyle\, \frac{\sec x \sin x}{\tan x + \cot x} = \sin^2 x\)
