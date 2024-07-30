@@ -1,0 +1,181 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mdframed}
+\usepackage{hyperref}
+\usepackage{amsthm}
+
+\marksnotpoints
+\pointsinrightmargin
+\bracketedpoints
+\printanswers
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue,
+  pdfpagemode=FullScreen,
+}
+
+\urlstyle{same}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Pre Calc Prep}{Sequences and Series}{Shah}
+\runningheader{}{Sequences and Series Notes}{}
+\firstpagefooter{}{}{}
+\runningfooter{ }{\thepage}{ }
+
+\begin{document}
+    \begin{tcolorbox}[breakable, title=SEQUENCES REVIEW, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+        \Large \textbf{Review and Definition}
+        \newline\normalsize A sequence is an ordered list of numbers that follows a specific rule or pattern. Sequence terms are standardly notated in the following manner:
+        \begin{equation*}
+          a_1, a_2, a_3, \ldots, a_n
+        \end{equation*}
+        where $a_1$ is the first term, $a_2$ the second term, and $a_n$ represents the $n$-th term. The actual sequence may be denoted in multiple different ways: 
+        \vspace{0.1in}
+        \newline
+        \begin{minipage}{0.3\linewidth}
+          \[
+            \{a_1, a_2, a_3, \ldots, a_n, a_{n+1}\}
+          \]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+          \[
+            \{a_n\}
+          \]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.3\linewidth}
+          \[
+            \{a_n\}_{n=1}^{\infty}
+          \]
+        \end{minipage}
+        \vspace{0.2in}
+        \newline In the second and third representations, $a_n$ will be given by a formula, either explicitly inside the curly braces or in another way. In the third notation, the $n=1$ represents the starting index of the sequence (note that not all sequences start at 1) and the $\infty$ is the ending index. Note that not all sequences are infinite, for example, $\{a_n\}_{n=3}^{10}$ is also a valid sequence.
+
+        \begin{questions}
+          \begin{minipage}{0.45\linewidth}
+            \question Write the first five terms of the sequence $\displaystyle\, \left\{2^n\right\}_{n=0}^{10}$
+          \end{minipage}
+          \hfill
+          \begin{minipage}{0.45\linewidth}
+            \question Write the general formula for the sequence $\{5, 10, 15, 20, \ldots \}$
+          \end{minipage}
+        \end{questions}
+        \vspace{1in}
+        \hrulefill 
+        
+        When it comes to defining sequences there are two main ways to do so: the \textbf{explicit} formula or the \textbf{recursive} formula. The explicit formula defines a rule for any $a_n$ given any $n$ meanwhile the recursive formula defines a formula for $a_n$ based on $a_{n-1}$. To see the difference look at the following examples: 
+        \vspace{0.2in}
+        \newline
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Explicit}
+          \end{center}
+          \[
+            a_n = 5n
+          \]
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Recursive}
+          \end{center}
+          \[
+            a_{n+1} = 5 + a_n \text{;} \hspace{0.1in} a_1 = 5
+          \]
+        \end{minipage}
+        \vspace{0.1in}\newline A few key things are important to note here when looking at the recursive formula. First, notice that the term that is defined is $a_{n+1}$ and not $a_n$ since the $a_n$ term is being used in the formula. With this, you should be aware that the recursive formula could've also been written in the following manner: 
+        \newline 
+        \[
+          a_n = 5 + a_{n-1} \text{;} \hspace{0.1in} a_1 = 5
+        \]
+        Also notice how a 'base term' is defined, $a_1$. This tells us our starting term and using that we can begin to find other terms in the sequence. 
+    \end{tcolorbox}
+
+    \newpage 
+
+    \begin{tcolorbox}[breakable, title=SERIES, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+      \Large \textbf{Review and Definition}
+      \newline\normalsize While sequences may be ordered lists of numbers, series are sums of the elemnets of a sequence. Given some sequence, $\{a_n\}_{n=1}^\infty$ with elements $\{a_1, a_2, \ldots, a_n\}$ we can define the following: 
+      \begin{align*}
+        s_1 &= a_1 \\
+        s_2 &= a_1 + a_2 \\ 
+        s_3 &= a_1 + a_2 + a_3 \\ 
+        \vdots \\ 
+        s_n &= a_1 + a_2 + a_3 + \cdots + a_n = \sum\limits_{n=1}^\infty a_n
+      \end{align*}
+      The $s_n$ are call \textbf{partial sums} and will form the \textit{sequence} $\{s_n\}_{n=1}^\infty$.
+      \newline
+      \vspace{0.1in}
+      \noindent\makebox[\linewidth]{\hrulefill}
+
+      \large\textbf{Summation Notation}
+      \newline\normalsize As you saw another way to represent the sum $s_n$ was with a capital sigma, $\sum$. Given a summation, $\sum\limits_{n=1}^\infty a_n$ the $n$ is called the \textbf{index of summation} or index for short. It's important to note that the index is simply a dummy variable that takes on value only because of its context and enviornment. Because of that, 
+      \[
+          \sum\limits_{n=1}^\infty a_n = \sum\limits_{k=1}^\infty a_k = \sum\limits_{j=1}^\infty a_j
+      \]
+      All three of the above series are the same series, save for the fact that we've choosen a different letter to represent the index. As with sequences it's also important to know that the starting and ending values can be anything, we don't have to start at $n=0$ or $n=1$ and we don't have to end at $\infty$. In fact, you might often see the notation $\sum a_n$ to represent a generic series in which the starting and ending values are irrelevant to the presented fact. 
+          \begin{tcolorbox}[breakable, title=PROPERTIES OF SERIES, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+            If $\sum a_n$ and $\sum b_n$ are two series\footnote{Assume $\sum a_n$ and $\sum b_n$ are convergent},
+            \begin{enumerate}
+              \item If $c$ is any number ($c \in \mathbb{R}$) then 
+                \[
+                  \sum ca_n = c\sum a_n
+                \]
+
+              \item Series can be combined by addition and subtraction 
+                \[
+                  \sum a_n \pm \sum b_n = \sum a_n \pm b_n 
+                \]
+            \end{enumerate}
+          \end{tcolorbox}
+          \newpage
+          \large \textbf{Index Shifts}
+          \newline\normalsize The next topic to discuss is the \textbf{index shift}. The index shift is a technique used to manipulate a given series so that it starts/ends at a different value. First start with the following series: 
+          \[
+            \sum\limits_{n=1}^{k} a_n
+          \]
+          and now say that we want the series to start at $n=0$ instead of $n=1$. Lets start by defining $i=n-1$ since plugging in $n=1$ gives $i=1-1=0$. Before we can change our series we first have to figure out what $i$ will equal at the the start and end of our summation. Like previously mentioned, when $n=1$, $i=0$. As for the end we can apply the same logic, when $n=k$, $i=k-1$. Finally we need to change the inside of our summation, to do that let's rewrite $i=n-1$ as $n=i+1$ and then plug that in to $a_n$ to give $a_{i+1}$. Putting this all together gives, 
+          \[
+            \sum\limits_{n=1}^{k} a_n = \sum\limits_{i=0}^{k-1} a_{i+1}
+          \]
+          And again, since the index letter doesn't matter, we could change it back to $n$ if we'd like. Similar to the above work, we can also shift the index to increase by following similar steps. Define $i=n+1$, solve for the limits and change the term:
+          \[
+            \sum\limits_{n=1}^{k} a_n = \sum\limits_{i=2}^{k+1} a_{i-1}
+          \]
+          \newline
+          \vspace{0.1in}
+          \noindent\makebox[\linewidth]{\hrulefill}
+          Although not an index shift, we can also rewrite series by adding and removing terms. First, consider the sequence $\{a_n\}_{n=1}^{k} = \{a_1, a_2, a_3, \ldots, a_k\}$ and the series $\sum\limits_{n=1}^{k} a_n$. Now, notice that, 
+          \[
+            \sum\limits_{n=1}^{k} a_n = a_1 + \sum\limits_{n=1}^{k} a_n
+          \]
+          and that 
+          \[
+            \sum\limits_{n=1}^{k} a_n = a_k + \sum\limits_{n=1}^{k-1} a_n
+          \]
+          Now, we can apply this multiple times over to strip out the first or last $n$ terms from a series without it changing the value. 
+          \newline 
+          \vspace{0.1in}
+          \noindent\makebox[\linewidth]{\hrulefill}
+          \begin{questions}
+            \begin{minipage}{0.45\linewidth}
+              \question Rewrite the series $\sum\limits_{z=3}^{32} \frac{1}{2^z}$ to start at $z=0$
+            \end{minipage}
+            \hfill 
+            \begin{minipage}{0.45\linewidth}
+              \question Strip out the first \underline{and} last term from the series $\sum\limits_{q=0}^{10} \frac{2}{5}z$
+              \end{minipage}
+            \vspace{1.6in}
+          \end{questions}
+    \end{tcolorbox}
+\end{document}
