@@ -1,0 +1,181 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mdframed}
+\usepackage{hyperref}
+\usepackage{amsthm}
+
+\marksnotpoints
+\pointsinrightmargin
+\bracketedpoints
+\printanswers
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue,
+  pdfpagemode=FullScreen,
+}
+
+\urlstyle{same}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Pre Calc Prep}{Trig PSET}{Shah}
+\runningheader{}{Trig}{}
+\firstpagefooter{}{}{}
+\runningfooter{ }{\thepage}{ }
+
+\begin{document}
+  \vspace{1in}
+
+  \noindent\makebox[\textwidth]{Name:\enspace\hrulefill}
+
+  \vspace{.1in}
+
+  \begin{center}
+      \fbox{\fbox{\parbox{5.5in}{\centering
+      Answer the questions in the spaces provided on the following pages.  If you run out of room for an answer, continue on the back of the page. Show \textbf{all} your work!}}}
+  \end{center}
+  
+  \begin{questions}
+    \question Write a recursive and generic formula for the following sequences
+    \begin{parts}
+      \part $a_n = \{1, 2, 3, 4, \ldots, n\}$
+      \begin{solution}[\stretch{1}]
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Generic}
+          \end{center}
+          \[
+            a_n = n
+          \]
+        \end{minipage}
+        \hfill 
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Recursive}
+          \end{center}
+          \[
+            a_{n+1} = n + 1 \text{;} \hspace{0.1in} a_1 = 1
+          \]
+        \end{minipage}
+      \end{solution}
+
+      \part $a_n = \{3, 6, 9, 12, \ldots, n\}$
+      \begin{solution}[\stretch{1}]
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Generic}
+          \end{center}
+          \[
+            a_n = 3 + 3(n-1) = 3n
+          \]
+        \end{minipage}
+        \hfill 
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Recursive}
+          \end{center}
+          \[
+            a_{n+1} = 3 + a_{n} \text{;} \hspace{0.1in} a_1 = 3
+          \]
+        \end{minipage}
+      \end{solution}
+
+      \part $a_n = \{1, 3, 9, 27, \ldots, n\}$ 
+      \begin{solution}[\stretch{1}]
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Generic}
+          \end{center}
+          \[
+            a_n = 3^n
+          \]
+        \end{minipage}
+        \hfill 
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Recursive}
+          \end{center}
+          \[
+            a_{n+1} = 3\left(a_n\right) \text{;} \hspace{0.1in} a_1 = 1
+          \]
+        \end{minipage}
+      \end{solution}
+
+      \part $\displaystyle\,a_n = \{\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \ldots, n\}$ 
+      \begin{solution}[\stretch{1}]
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Generic}
+          \end{center}
+          \vspace{0.1in}
+          \[
+            a_n = \left(\frac{1}{2}\right)^n
+          \]
+        \end{minipage}
+        \hfill 
+        \begin{minipage}{0.45\linewidth}
+          \begin{center}
+            \underline{Recursive}
+          \end{center}
+          \vspace{0.1in}
+          \[
+            a_{n+1} = \frac{1}{2}\left(a_n\right) \text{;} \hspace{0.1in} a_1 = \frac{1}{2}
+          \]
+        \end{minipage}
+      \end{solution}
+    \end{parts}
+
+    \question Rewrite the series $\displaystyle\, \sum\limits_{n=0}^{12} \frac{n+2}{3}$ to start at $n=3$
+    \begin{solution}[\stretch{1}]
+      \[
+        \sum\limits_{n=3}^{15} \frac{n-3+2}{3} = \sum\limits_{n=3}^{15} \frac{n-1}{3}
+      \]      
+    \end{solution}
+
+    \question Rewrite the series $\displaystyle\, \sum\limits_{n=5}^{20} \frac{n}{(n-1)^2}$ to start at $n=0$
+    \begin{solution}[\stretch{1}]
+      \[
+        \sum\limits_{n=0}^{15} \frac{n+5}{(n+5-1)^2} = \sum\limits_{n=0}^{15} \frac{n+5}{(n-4)^2}
+      \]
+    \end{solution}
+
+    \newpage 
+
+    \question Strip out the last term of the sum $\displaystyle\, \sum\limits_{n=0}^{22} \frac{n+8}{3}$ 
+    \begin{solution}[\stretch{1}]
+      \[
+        \frac{22+8}{3} + \sum\limits_{n=0}^{21} \frac{n+8}{3} = 10 + \sum\limits_{n=0}^{21} \frac{n+8}{3}
+      \]
+    \end{solution}
+
+    \question Rewrite the following expression as a single summation, $\displaystyle\, \sum\limits_{i=0}^{k} i^3 + \left(k+1\right)^3$
+    \begin{solution}[\stretch{1}]
+      \[
+        \sum\limits_{n=0}^{k+1} i^3 
+      \]
+    \end{solution}
+
+    \question Write the following in summation notation $\displaystyle\, \frac{1}{2} + \frac{2}{3^2} + \frac{3}{4^3} + \cdots + \frac{n}{\left(n+1\right)^n}$ 
+    \begin{solution}[\stretch{1}]
+      \[
+        \sum\limits_{k=1}^{n} \frac{k}{\left(k+1\right)^k}
+      \]
+    \end{solution}
+
+    \question Write the following expression as a single summation: $\displaystyle\, 3 * \sum\limits_{t=1}^{p} \left(2t-3\right) + \sum\limits_{t=1}^{p} \left(4-5t\right)$
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+        3 * \sum\limits_{t=1}^{p} \left(2t-3\right) + \sum\limits_{t=1}^{p} \left(4-5t\right) &= \sum\limits_{t=1}^{p} \left(6t-9\right) + \sum\limits_{t=1}^{p} \left(4-5t\right) \\ 
+        &= \sum\limits_{t=1}^{p} t-5
+      \end{align*}
+    \end{solution}
+  \end{questions}
+\end{document}

@@ -177,5 +177,42 @@
               \end{minipage}
             \vspace{1.6in}
           \end{questions}
+          \newpage 
+          \large\textbf{Sums of Sequences}
+          \newline\normalsize For certain types of series it's possible to find the sum of the first $n$ terms.
+              \begin{tcolorbox}[breakable, title=SUM OF ARITHMETIC SEQUENCE, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+                First, define an arthithmetic sequence to be a sequence defined by the following pattern, 
+                \[
+                  a_n = a_1 + d(n-1)
+                \]
+                where $a_1$ is the first term, $d$ is the "common difference" and $n$ is the term positionposition. Next, define the sum of the first $n$ terms to be,
+                \begin{align*}
+                  S_n &= \frac{n}{2}\left(2a_1 + d(n-1)\right) \\ 
+                S_n &= n\left(\frac{a_1 + a_n}{2}\right)                
+                \end{align*}
+                Note that the second formula is derived from a sequence $a_n = a_1 + a_2 + a_3 + \cdots + a_n$. As well, note that you can only sum up the first $n$ terms as long as $n$ is finite. The infinite sum of an arthithmetic sequence is not defined or $\infty$.
+              \end{tcolorbox}
+
+              \begin{tcolorbox}[breakable, title=SUM OF A GEOMETRIC SEQUENCE, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+                First, define a geometric sequence to be one in the following pattern,
+                \[
+                  a_n = a_1r^{n-1}
+                \]
+                where $a_1$ is the first term and $r$ is the common ratio. Next define the sum of the first $n$ terms to be, 
+                \[
+                  S_n = \frac{a_1(1-r^n)}{1-r}
+                \]
+                Finally, define the \textit{infinite} sume to be,
+                \[
+                  S\footnote{This may also be notated as $S_\infty$} = \frac{a_1}{1-r}
+                \]
+                This sum, $S$, is known as the infinite sum because it is the sum of every term in the sequence. However, note that $S$ will exist \textbf{if, and only if} $|r| < 1$
+              \end{tcolorbox}
+          \begin{questions}
+            \question Find the sum of the first 10 terms of the sequence $a_n = 1 + 4(n-1)$
+            \vspace{0.75in}
+            \question Find the sum of the first 10 terms of the sequence $\displaystyle\,a_n = \frac{3}{4^n}$. If possible, find the infinite sum of the sequence. 
+            \vspace{0.7in}
+          \end{questions}
     \end{tcolorbox}
 \end{document}
