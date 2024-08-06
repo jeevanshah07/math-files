@@ -176,4 +176,69 @@
       \newline
     \end{proof}
     \fi
+    \newpage 
+        \begin{tcolorbox}[breakable, title=FACTORIAL REVIEW, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+          \Large\textbf{Intro and Definition}
+          \normalsize
+          \begin{tcolorbox}[breakable, title=DEFINITION, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+            For all positive integers $n$, $n$ factorial is defined as follows
+            \[
+              n\textbf{!} = 1 * 2 * 3 * \cdots * n
+            \]
+            The factorial function is defined for all non negative integers ($\mathbb{Z}^{nonneg}$) with $0\textbf{!} = 1$ and $1\textbf{!} = 1$.
+        \end{tcolorbox}
+        The real world application of the factorial can be thought of the number of different ways to arrange $n$ objects. This also helps explain why $0\textbf{!} = 1$, as there is only 1 way to arrange no objects.
+      \vspace{0.1in}
+      \noindent\makebox[\linewidth]{\hrulefill}
+      \newline
+      \Large\textbf{Properties and Important Notes}
+      \normalsize
+        \begin{tcolorbox}[breakable, title=PROPERTIES, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+          \begin{enumerate}
+            \item Factorial can be defined recursively meaing that 
+              \[
+                n\textbf{!} = n * \left(n-1\right)\textbf{!}
+              \]
+            \item The factorial operation is \textbf{not}a distributive operator
+              \[
+                (n+1)\textbf{!} \ne n\textbf{!} + 1\textbf{!}
+              \]
+            \item This also means that 
+              \[
+                \left(2n\right)\textbf{!} \ne 2 * n\textbf{!}
+              \]
+          \end{enumerate}
+        \end{tcolorbox}
+    \end{tcolorbox}
+    \vspace{0.2in}
+    \Large\textbf{Examples}\normalsize
+    \begin{questions}
+      \question Find $n\textbf{!}$ for $n=1$ to $n=5$
+      \begin{solution}[\stretch{1}]
+        \begin{align*}
+          1\textbf{!} &= 1 \\ 
+          2\textbf{!} &= 2 * 1 = 2 \\ 
+          3\textbf{!} &= 3 * 2 * 1 = 6 \\ 
+          4\textbf{!} &= 4 * 3 * 2 * 1 = 24 \\ 
+          5\textbf{!} &= 5 * 4 * 3 * 2 * 1 = 120
+        \end{align*}
+      \end{solution}
+
+      \question Evaluate $\displaystyle\,\frac{8\textbf{!}}{5\textbf{!}}$
+      \begin{solution}[\stretch{1}]
+        \begin{align*}
+          \frac{8\textbf{!}}{5\textbf{!}} &= \frac{8 * 7 * 6 * 5\textbf{!}}{5\textbf{!}} \\ 
+          &= 8 * 7 * 6 = 336
+        \end{align*}
+      \end{solution}
+
+      \question Simplify the following expression $\displaystyle\,\frac{\left(n+2\right)\textbf{!}}{n\left(n-1\right)\textbf{!}}$
+      \begin{solution}[\stretch{1}]
+        \begin{align*}
+          \frac{\left(n+2\right)\textbf{!}}{n\left(n-1\right)\textbf{!}} &= \frac{\left(n+2\right)\textbf{!}}{n\textbf{!}} \\ 
+          &= \frac{\left(n+2\right)\left(n+1\right)\left(n\textbf{!}\right)}{n\textbf{!}} \\ 
+          &= \left(n+2\right)\left(n+1\right)
+        \end{align*}
+      \end{solution}
+    \end{questions}
   \end{document}
