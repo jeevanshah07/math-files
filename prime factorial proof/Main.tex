@@ -19,7 +19,7 @@ Any integer $n>1$ is divisible by a prime number.
 \end{theorem}
 
 \begin{theorem}
-For call integers $n$, if $n>2$ then there is a prime number $p$ such that $n<p<n\textbf{!}$
+For all integers $n$, if $n>2$ then there is a prime number $p$ such that $n<p<n\textbf{!}$
 \end{theorem}
 
 \begin{proof}
@@ -46,6 +46,6 @@ For call integers $n$, if $n>2$ then there is a prime number $p$ such that $n<p<
     \implies 0 &\equiv -1 \pmod{p} \label{eq:3}
   \end{align}
 
-  But, in order for equation~\ref{eq:3} to be true $p$ must be equal to $1$ \textit{[for the sake of modular arithmatic assume our domain to be $\mathbb{Z}^{+}$]}. Thus we have reached a contradiction since $p \leq n$ and $n > 2$ so $p \ne 1$. So, $p > n$ and \\ $p \mid \left(n\textbf{!}-1\right) \implies p \leq \left(n\textbf{!}-1\right)$. Because $\left(n\textbf{!}-1\right) < n\textbf{!}$, we know that \\ $p \leq \left(n\textbf{!}-1\right) < n\textbf{!}$ so, $n < p < n\textbf{!}$ \textit{[which was to be proved.]}
+  But, in order for equation~\ref{eq:3} to be true $p$ must be equal to $1$ \textit{[for the sake of modular arithmatic we assume our domain to be $\mathbb{Z}^{+}$]}. Thus we have reached a contradiction since $p \geq n$ and $n > 2$ so $p \ne 1$. So, $p > n$ and \\ $p \mid \left(n\textbf{!}-1\right) \implies p \leq \left(n\textbf{!}-1\right)$. Because $\left(n\textbf{!}-1\right) < n\textbf{!}$, we know that \\ $p \leq \left(n\textbf{!}-1\right) < n\textbf{!}$ so, $n < p < n\textbf{!}$ \textit{[which was to be proved.]}
 \end{proof}
 \end{document}
