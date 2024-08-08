@@ -34,193 +34,193 @@
 \runningfooter{ }{\thepage}{ }
 
 \begin{document}
-  \vspace{1in}
+\vspace{1in}
 
-  \noindent\makebox[\textwidth]{Name:\enspace\hrulefill}
+\noindent\makebox[\textwidth]{Name:\enspace\hrulefill}
 
-  \vspace{.1in}
+\vspace{.1in}
 
-  \begin{center}
-      \fbox{\fbox{\parbox{5.5in}{\centering
-      Answer the questions in the spaces provided on the following pages.  If you run out of room for an answer, continue on the back of the page. Show \textbf{all} your work!}}}
-  \end{center}
-  
-  \begin{questions}
-    \question Prove the following using proof by induction
-    \begin{center}
-      For all positive integers, $n$, $\displaystyle\,1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}$
-    \end{center}
-    \begin{solution}[\stretch{1}]
-      \begin{proof}
-        Let $P(n)$ be the formula \[\displaystyle\,1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}\]
-        \textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true we will show that LHS and the RHS are equivalent. The LHS is simply $1^2=1$ and the RHS is $\displaystyle\, \frac{1(1+1)(2(1)+1)}{6} = \frac{1(2)(3)}{6} = 1$ and so the LHS and RHS equal the same quantity and thus must be equivalent, proving the truthfullness of $P(1)$
-        \newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} First, we will assume that $P(k)$ is true or that 
-        \[
-          1^2 + 2^2 + 3^2 + \cdots + k^2 = \frac{k(k+1)(2k+1)}{6}
-        \]
-        Next, we will need to show that $P(k+1)$ is true or that 
-        \[
-          1^2 + 2^2 + 3^2 + \cdots + (k+1)^2 = \frac{(k+1)\left[\left(k+1\right)+1\right]\left[2\left(k+1\right)+1\right]}{6} = \frac{(k+1)(k+2)(2k+3)}{6}
-        \]
-        We can rewrite the LHS in the following way 
-        \begin{align*}
-          1^2 + 2^2 + 3^2 + \cdots + k^2 + (k+1)^2 &= \frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\ 
-          &= \frac{k(k+1)(2k+1)}{6} + \frac{6(k+1)^2}{6} \\
-          &= \frac{k(k+1)(2k+1)}{6} + \frac{6(k^2 + 2k + 1)}{6} \\ 
-          &= \frac{(k^2+k)(2k+1)}{6} + \frac{6k^2 + 12k + 6}{6} \\ 
-          &= \frac{2k^3 + 2k^2 + k^2 + k}{6} + \frac{6k^2 + 12k + 6}{6} \\ 
-          &= \frac{2k^3 + 9k^2 + 13k + 6}{6}
-        \end{align*}
-        The RHS can be expanded to give
-        \begin{align*}
-          \frac{(k+1)(k+2)(2k+3)}{6} &= \frac{(k^2 + 3k + 2)(2k+3)}{6} \\ 
-          &= \frac{2k^3 + 3k^2 + 6k^2 + 9k + 4k + 6}{6} \\ 
-          &= \frac{2k^3 + 9k^2 + 13k + 6}{6}
-        \end{align*}
-        Now our LHS and RHS equal the same quantity and must be equivalent, thus our statement holds true through proof by induction.
-      \end{proof}
-    \end{solution}
+\begin{center}
+	\fbox{\fbox{\parbox{5.5in}{\centering
+				Answer the questions in the spaces provided on the following pages.  If you run out of room for an answer, continue on the back of the page. Show \textbf{all} your work!}}}
+\end{center}
 
-    \newpage
+\begin{questions}
+	\question Prove the following using proof by induction
+	\begin{center}
+		For all positive integers, $n$, $\displaystyle\,1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}$
+	\end{center}
+	\begin{solution}[\stretch{1}]
+		\begin{proof}
+			Let $P(n)$ be the formula \[\displaystyle\,1^2 + 2^2 + 3^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}\]
+			\textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true we will show that LHS and the RHS are equivalent. The LHS is simply $1^2=1$ and the RHS is $\displaystyle\, \frac{1(1+1)(2(1)+1)}{6} = \frac{1(2)(3)}{6} = 1$ and so the LHS and RHS equal the same quantity and thus must be equivalent, proving the truthfullness of $P(1)$
+			\newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} First, we will assume that $P(k)$ is true or that
+			\[
+				1^2 + 2^2 + 3^2 + \cdots + k^2 = \frac{k(k+1)(2k+1)}{6}
+			\]
+			Next, we will need to show that $P(k+1)$ is true or that
+			\[
+				1^2 + 2^2 + 3^2 + \cdots + (k+1)^2 = \frac{(k+1)\left[\left(k+1\right)+1\right]\left[2\left(k+1\right)+1\right]}{6} = \frac{(k+1)(k+2)(2k+3)}{6}
+			\]
+			We can rewrite the LHS in the following way
+			\begin{align*}
+				1^2 + 2^2 + 3^2 + \cdots + k^2 + (k+1)^2 & = \frac{k(k+1)(2k+1)}{6} + (k+1)^2                           \\
+				                                         & = \frac{k(k+1)(2k+1)}{6} + \frac{6(k+1)^2}{6}                \\
+				                                         & = \frac{k(k+1)(2k+1)}{6} + \frac{6(k^2 + 2k + 1)}{6}         \\
+				                                         & = \frac{(k^2+k)(2k+1)}{6} + \frac{6k^2 + 12k + 6}{6}         \\
+				                                         & = \frac{2k^3 + 2k^2 + k^2 + k}{6} + \frac{6k^2 + 12k + 6}{6} \\
+				                                         & = \frac{2k^3 + 9k^2 + 13k + 6}{6}
+			\end{align*}
+			The RHS can be expanded to give
+			\begin{align*}
+				\frac{(k+1)(k+2)(2k+3)}{6} & = \frac{(k^2 + 3k + 2)(2k+3)}{6}             \\
+				                           & = \frac{2k^3 + 3k^2 + 6k^2 + 9k + 4k + 6}{6} \\
+				                           & = \frac{2k^3 + 9k^2 + 13k + 6}{6}
+			\end{align*}
+			Now our LHS and RHS equal the same quantity and must be equivalent, thus our statement holds true through proof by induction.
+		\end{proof}
+	\end{solution}
 
-    \question Prove the following using proof by induction
-    \begin{center}
-      For all integers $n \geq 1$, $\displaystyle\, 1 + 3 + 5 + \cdots + (2n-1) = n^2$
-    \end{center}
-    \begin{solution}[\stretch{1}]
-      \begin{proof}
-        Let $P(n)$ be the formula 
-        \[
-        1 + 3 + 5 + \cdots + (2n-1) = n^2
-        \]
-        \textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true, we will need to show that the LHS and RHS are equivalent. Well, the LHS is $2(1)-1=1$ and the RHS is $1^2=1$ and so both sides equal the same quantity and thus are equivalent, proving the truthfullness of $P(1)$ 
-        \newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} We will assume that $P(k)$ is true or that 
-        \[
-        1 + 3 + 5 + \cdots + (2k-1) = k^2
-        \]
-        and we must show that $P(k+1)$ is true, or that 
-        \[
-        1 + 3 + 5 + \cdots + \left(2\left(k+1\right)-1\right) = \left(k+1\right)^2
-        \]
-        We can begin with the LHS as follows, 
-        \begin{align*}
-          1 + 3 + 5 + \cdots + (2k + 1) &= 1 + 3 + 5 + \cdots + (2k - 1) + (2k + 1) \\ 
-          &= k^2 + (2k + 1) \\ 
-          &= (k+1)(k+1) \\ 
-          &= \left(k+1\right)^2 
-        \end{align*}
-        And so, our LHS and RHS equal the same quantity and thus are equivalent, proving our statement through proof by induction.
-      \end{proof}
-    \end{solution}
+	\newpage
 
-    \question Prove the following using proof by induction 
-    \begin{center}
-      For all integers $n \geq 1$, $\displaystyle\, 2 + 4 + 6 + \cdots + 2n = n^2 + n$
-    \end{center}
-    \begin{solution}[\stretch{1}]
-      \begin{proof}
-        Let $P(n)$ be the formula 
-        \[
-          2 + 4 + 6 + \cdots + 2n = n^2 + n
-        \]
-        \textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true we will show that the LHS and the RHS are equivalent. The LHS is $2(1)=2$ and the RHS is $1^2 + 1 = 2$ and so, since the LHS and RHS are equivalent, $P(1)$ holds true.
-        \newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} We will assume that $P(k)$ is true or that 
-        \[
-          2 + 4 + 6 + \cdots + 2k = k^2 + k 
-        \] 
-        and we will show that $P(k+1)$ is true or that 
-        \[
-          2 + 4 + 6 + \cdots + 2(k+1) = (k+1)^2 + k = k^2 + 2k + 1 + k = k^2 + 3k + 1
-        \]
-        We can begin with the LHS to show 
-        \begin{align*}
-          2 + 4 + 6 + \cdots 2(k+1) &= 2 + 4 + 6 + \cdots + 2k + 2(k+1) \\ 
-          &= (k^2 + k) + 2(k+1) \\ 
-          &= k^2 + k + 2k + 1 \\ 
-          &= k^2 + 3k + 1
-        \end{align*}
-        Which is the RHS of $P(k+1)$ and so our LHS and RHS are equivalent, proving the validity of our statement through proof by induction.
-      \end{proof}
-    \end{solution}
+	\question Prove the following using proof by induction
+	\begin{center}
+		For all integers $n \geq 1$, $\displaystyle\, 1 + 3 + 5 + \cdots + (2n-1) = n^2$
+	\end{center}
+	\begin{solution}[\stretch{1}]
+		\begin{proof}
+			Let $P(n)$ be the formula
+			\[
+				1 + 3 + 5 + \cdots + (2n-1) = n^2
+			\]
+			\textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true, we will need to show that the LHS and RHS are equivalent. Well, the LHS is $2(1)-1=1$ and the RHS is $1^2=1$ and so both sides equal the same quantity and thus are equivalent, proving the truthfullness of $P(1)$
+			\newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} We will assume that $P(k)$ is true or that
+			\[
+				1 + 3 + 5 + \cdots + (2k-1) = k^2
+			\]
+			and we must show that $P(k+1)$ is true, or that
+			\[
+				1 + 3 + 5 + \cdots + \left(2\left(k+1\right)-1\right) = \left(k+1\right)^2
+			\]
+			We can begin with the LHS as follows,
+			\begin{align*}
+				1 + 3 + 5 + \cdots + (2k + 1) & = 1 + 3 + 5 + \cdots + (2k - 1) + (2k + 1) \\
+				                              & = k^2 + (2k + 1)                           \\
+				                              & = (k+1)(k+1)                               \\
+				                              & = \left(k+1\right)^2
+			\end{align*}
+			And so, our LHS and RHS equal the same quantity and thus are equivalent, proving our statement through proof by induction.
+		\end{proof}
+	\end{solution}
 
-    \newpage 
+	\question Prove the following using proof by induction
+	\begin{center}
+		For all integers $n \geq 1$, $\displaystyle\, 2 + 4 + 6 + \cdots + 2n = n^2 + n$
+	\end{center}
+	\begin{solution}[\stretch{1}]
+		\begin{proof}
+			Let $P(n)$ be the formula
+			\[
+				2 + 4 + 6 + \cdots + 2n = n^2 + n
+			\]
+			\textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true we will show that the LHS and the RHS are equivalent. The LHS is $2(1)=2$ and the RHS is $1^2 + 1 = 2$ and so, since the LHS and RHS are equivalent, $P(1)$ holds true.
+			\newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} We will assume that $P(k)$ is true or that
+			\[
+				2 + 4 + 6 + \cdots + 2k = k^2 + k
+			\]
+			and we will show that $P(k+1)$ is true or that
+			\[
+				2 + 4 + 6 + \cdots + 2(k+1) = (k+1)^2 + k = k^2 + 2k + 1 + k = k^2 + 3k + 1
+			\]
+			We can begin with the LHS to show
+			\begin{align*}
+				2 + 4 + 6 + \cdots 2(k+1) & = 2 + 4 + 6 + \cdots + 2k + 2(k+1) \\
+				                          & = (k^2 + k) + 2(k+1)               \\
+				                          & = k^2 + k + 2k + 1                 \\
+				                          & = k^2 + 3k + 1
+			\end{align*}
+			Which is the RHS of $P(k+1)$ and so our LHS and RHS are equivalent, proving the validity of our statement through proof by induction.
+		\end{proof}
+	\end{solution}
 
-    \question \textit{(Challenge)} Prove the following using proof by induction
-    \begin{center}
-      For all integers $n \geq 1$, $\displaystyle\,\sum\limits_{i=1}^{n} i\left(i\textbf{!}\right) = (n+1)\textbf{!} - 1$
-    \end{center}
-    \begin{solution}[\stretch{1}]
-      \begin{proof}
-        Let $P(n)$ be the formula 
-        \[
-          \sum\limits_{i=1}^{n} i\left(i\textbf{!}\right) = \left(n+1\right)\textbf{!} - 1
-        \]
-        \textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true we will show that the LHS and RHS are equivalent. 
-        \newline
-        \begin{minipage}[t]{0.45\linewidth}
-          \begin{center}
-            \underline{LHS}
-          \end{center}
-          \[
-            \sum\limits_{i=1}^{1} i\left(i\textbf{!}\right) = 1(1\textbf{!}) = 1(1) = 1
-          \]
-        \end{minipage}
-        \hfill
-        \begin{minipage}[t]{0.45\linewidth}
-          \begin{center}
-            \underline{RHS}
-          \end{center}
-          \[
-            \left(1+1\right)\textbf{!} - 1 = 2\textbf{!} - 1 = 2 - 1 = 1
-          \]
-        \end{minipage}
-        \newline And so, our LHS and RHS are equivalent, thus proving $P(1)$ 
-        \newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} First, we will assume that $P(k)$ is true or that 
-        \[
-        \sum\limits_{i=1}^{k} i\left(i\textbf{!}\right) = \left(k+1\right)\textbf{!} - 1
-        \]
-        and we will need to show that $P(k+1)$ is true or that 
-        \[
-        \sum\limits_{i=1}^{k+1} i\left(i\textbf{!}\right) = \left[\left(k+1\right)+1\right]\textbf{!}-1 = \left(k+2\right)\textbf{!} - 1
-        \]
-        We can begin with the LHS as follows, 
-        \begin{align*}
-          \sum\limits_{i=1}^{k+1} i\left(i\textbf{!}\right) &= \left(k+1\right)\left[\left(k+1\right)\textbf{!}\right] + \sum\limits_{i=1}^{k} i\left(i\textbf{!}\right) \\ 
-          &= \left(k+1\right)\left(k+1\right)\textbf{!} + \left[\left(k+1\right)\textbf{!} - 1\right] \\ 
-          &= \left[\left(k+1\right)\left(k+1\right)\textbf{!} + \left(k+1\right)\textbf{!}\right] - 1 \tag{by the associative property of addition} \\ 
-          &= \left(k+1\right)\textbf{!}\left[\left(k+1\right) + 1\right] - 1 \tag{by factoring}\\ 
-          &= \left(k+1\right)\textbf{!}\left(k+2\right) - 1 \\ 
-          &= \left(k+2\right)\textbf{!} - 1 \tag{by properties of factorials}
-        \end{align*}
-        And so, our LHS is equivalent to the same quantity as the RHS and is thus equal to the RHS, proving our statement through induction.
-      \end{proof}
-    \end{solution}
-    \newpage 
-    \question \textit{(\textbf{Mega} Challenge)} Prove the following using proof by induction
-    \begin{center}
-      For all integers $n \geq 1$, $3$ is a factor of $4^n - 1$
-    \end{center}
-    \begin{solution}[\stretch{1}]
-      \begin{proof}
-        Let $P(n)$ be the statement that $3$ is a factor of $4^n - 1$ 
-        \newline\textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true we will show that $3$ is a factor of $4^1 - 1$. $4^1 - 1 = 3$ and $3/3 = 1$ which is an integer, thus $3$ is a factor of $4^1-1$ and $P(1)$ is valid. 
-        \newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} We will assume that $P(k)$ is true or that 
-        \[
-        \frac{4^k-1}{3} \in \mathbb{Z}
-        \]
-        and we will need to show that 
-        \[
-        \frac{4^{k+1}-1}{3} \in \mathbb{Z}
-        \]
-        We can do this by manipulating the LHS
-        \begin{align*}
-          4^{k+1} - 1 &= 4^{k+1} - 4^k + 4^k - 1 \\ 
-          &= 4^k * 4 - 4^k + 4^k - 1 \\ 
-          &= 4^k(4-1) + (4^k - 1) \\ 
-          &= 4^k(3) + (4^k - 1)
-        \end{align*}
-        Since we already know that $4^k-1$ has a factor of $3$ we can conclude that $4^{k+1}$ must also have a factor of $3$ since $\displaystyle\, \frac{4^k(3)}{3} = 4^k \in \mathbb{Z}$ and so adding another factor of $3$ will still give a factor of $3$. Thus, our statement holds true through proof by induction.
-      \end{proof}
-    \end{solution}
-  \end{questions}
+	\newpage
+
+	\question \textit{(Challenge)} Prove the following using proof by induction
+	\begin{center}
+		For all integers $n \geq 1$, $\displaystyle\,\sum\limits_{i=1}^{n} i\left(i\textbf{!}\right) = (n+1)\textbf{!} - 1$
+	\end{center}
+	\begin{solution}[\stretch{1}]
+		\begin{proof}
+			Let $P(n)$ be the formula
+			\[
+				\sum\limits_{i=1}^{n} i\left(i\textbf{!}\right) = \left(n+1\right)\textbf{!} - 1
+			\]
+			\textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true we will show that the LHS and RHS are equivalent.
+			\newline
+			\begin{minipage}[t]{0.45\linewidth}
+				\begin{center}
+					\underline{LHS}
+				\end{center}
+				\[
+					\sum\limits_{i=1}^{1} i\left(i\textbf{!}\right) = 1(1\textbf{!}) = 1(1) = 1
+				\]
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{0.45\linewidth}
+				\begin{center}
+					\underline{RHS}
+				\end{center}
+				\[
+					\left(1+1\right)\textbf{!} - 1 = 2\textbf{!} - 1 = 2 - 1 = 1
+				\]
+			\end{minipage}
+			\newline And so, our LHS and RHS are equivalent, thus proving $P(1)$
+			\newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} First, we will assume that $P(k)$ is true or that
+			\[
+				\sum\limits_{i=1}^{k} i\left(i\textbf{!}\right) = \left(k+1\right)\textbf{!} - 1
+			\]
+			and we will need to show that $P(k+1)$ is true or that
+			\[
+				\sum\limits_{i=1}^{k+1} i\left(i\textbf{!}\right) = \left[\left(k+1\right)+1\right]\textbf{!}-1 = \left(k+2\right)\textbf{!} - 1
+			\]
+			We can begin with the LHS as follows,
+			\begin{align*}
+				\sum\limits_{i=1}^{k+1} i\left(i\textbf{!}\right) & = \left(k+1\right)\left[\left(k+1\right)\textbf{!}\right] + \sum\limits_{i=1}^{k} i\left(i\textbf{!}\right)                              \\
+				                                                  & = \left(k+1\right)\left(k+1\right)\textbf{!} + \left[\left(k+1\right)\textbf{!} - 1\right]                                               \\
+				                                                  & = \left[\left(k+1\right)\left(k+1\right)\textbf{!} + \left(k+1\right)\textbf{!}\right] - 1 \tag{by the associative property of addition} \\
+				                                                  & = \left(k+1\right)\textbf{!}\left[\left(k+1\right) + 1\right] - 1 \tag{by factoring}                                                     \\
+				                                                  & = \left(k+1\right)\textbf{!}\left(k+2\right) - 1                                                                                         \\
+				                                                  & = \left(k+2\right)\textbf{!} - 1 \tag{by properties of factorials}
+			\end{align*}
+			And so, our LHS is equivalent to the same quantity as the RHS and is thus equal to the RHS, proving our statement through induction.
+		\end{proof}
+	\end{solution}
+	\newpage
+	\question \textit{(\textbf{Mega} Challenge)} Prove the following using proof by induction
+	\begin{center}
+		For all integers $n \geq 1$, $3$ is a factor of $4^n - 1$
+	\end{center}
+	\begin{solution}[\stretch{1}]
+		\begin{proof}
+			Let $P(n)$ be the statement that $3$ is a factor of $4^n - 1$
+			\newline\textbf{Show that $P(1)$ is true:} To show that $P(1)$ is true we will show that $3$ is a factor of $4^1 - 1$. $4^1 - 1 = 3$ and $3/3 = 1$ which is an integer, thus $3$ is a factor of $4^1-1$ and $P(1)$ is valid.
+			\newline\textbf{Show that if $P(k)$ is true, so is $P(k+1)$:} We will assume that $P(k)$ is true or that
+			\[
+				\frac{4^k-1}{3} \in \mathbb{Z}
+			\]
+			and we will need to show that
+			\[
+				\frac{4^{k+1}-1}{3} \in \mathbb{Z}
+			\]
+			We can do this by manipulating the LHS
+			\begin{align*}
+				4^{k+1} - 1 & = 4^{k+1} - 4^k + 4^k - 1 \\
+				            & = 4^k * 4 - 4^k + 4^k - 1 \\
+				            & = 4^k(4-1) + (4^k - 1)    \\
+				            & = 4^k(3) + (4^k - 1)
+			\end{align*}
+			Since we already know that $4^k-1$ has a factor of $3$ we can conclude that $4^{k+1}$ must also have a factor of $3$ since $\displaystyle\, \frac{4^k(3)}{3} = 4^k \in \mathbb{Z}$ and so adding another factor of $3$ will still give a factor of $3$. Thus, our statement holds true through proof by induction.
+		\end{proof}
+	\end{solution}
+\end{questions}
 \end{document}
