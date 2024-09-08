@@ -1,0 +1,71 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mdframed}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{cancel}
+
+\usetikzlibrary{decorations.markings}
+
+\marksnotpoints
+\pointsinrightmargin
+\bracketedpoints
+%\printanswers
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue,
+  pdfpagemode=FullScreen,
+}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\newtheorem{theorem}{Theorem}
+
+\urlstyle{same}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Pre Calc Prep}{Advanced Limits}{Shah}
+\runningheader{Adv. Limits Notes}{}{Shah}
+\firstpagefooter{}{}{}
+\runningfooter{ }{\thepage}{ }
+
+\begin{document}
+\begin{tcolorbox}[breakable, title=PROPERTIES OF LIMITS, colframe=black, sharp corners, colback=white, colbacktitle=white, coltitle=black]
+  Suppose that $\displaystyle\, \lim\limits_{x\to\,c} f(x) = L$ and that $\displaystyle\, \lim\limits_{x\to\,c} g(x) = K$, 
+  \begin{enumerate}
+    \item $\displaystyle\,n * \lim\limits_{x\to\,c} f(x) = \lim\limits_{x\to\,c} n*f(x) = n*L$
+    \item $\displaystyle\,\lim\limits_{x\to\,c} \left[f(x)\right] \pm \lim\limits_{x\to\,c} \left[g(x)\right] = \lim\limits_{x\to\,c} \left[f(x) \pm g(x)\right] = L \pm K$
+    \item $\displaystyle\, \lim\limits_{x\to\,c} \left[f(x)*g(x)\right] = \lim\limits_{x\to\,c} \left[f(x)\right] * \lim\limits_{x\to\,c} \left[g(x)\right] = L * K$
+    \item $\displaystyle \lim\limits_{x\to\,c} \left[\frac{f(x)}{g(x)}\right] = \frac{\lim\limits_{x\to\,c} \left[f(x)\right]}{\lim\limits_{x\to\,c} \left[g(x)\right]} = \frac{L}{K}, \hspace{0.1in} \mbox{provided } \lim\limits_{x\to\,c} \left[g(x)\right] \ne 0$
+    \item $\displaystyle \lim\limits_{x\to\,c} \left[f(x)\right]^{n} = \left[\lim\limits_{x\to\,c} f(x)\right]^n = L^n, \hspace{0.1in} \mbox{where $n$ is any real number}$
+    \item $\displaystyle\, \lim\limits_{x\to\,c} a = a, \hspace{0.2in} \mbox{$a$ is any real number}$
+    \item $\displaystyle\, \lim\limits_{x\to\,c} x = c$
+    \item $\displaystyle\, \lim\limits_{x\to\,c} x^n = c^n$
+  \end{enumerate}
+\end{tcolorbox}
+
+\begin{questions}
+  \question Evaluate the following limit using \textit{only} the properties above
+  \[\lim\limits_{x\to\,-2} \left(3x^2+5x-9\right)\]
+  \begin{solution}[1.75in]
+    \begin{align*}
+      \lim\limits_{x\to\,-2} \left(3x^2 + 5x - 9\right) &= \lim\limits_{x\to\,-2} \left(3x^2\right) + \lim\limits_{x\to\,-2} \left(5x\right) + \lim\limits_{x\to\,-2} \left(-9\right) \tag{by property 2} \\ 
+      &= 3\lim\limits_{x\to\,-2} \left(x^2\right) + 5\lim\limits_{x\to\,-2} \left(x\right) - \lim\limits_{x\to\,-2} \left(9\right) \tag{by property 1} \\ 
+      &= 3\left(-2\right)^2 + 5\left(-2\right) - 9 \tag{by properties 6-8} \\ 
+      &= 3(4) - 10 - 9 = \boxed{-7}
+    \end{align*}
+  \end{solution}
+\end{questions}
+\noindent\makebox[\linewidth]{\hrulefill}
+Now note that if defined $\displaystyle\,p(x) = 3x^2+5x-9$ and evaluated $\lim\limits_{x\to\,-2} p(x)$ a quick direct substitution would have yielded that our limit equals $p(-2)=-7$
+\end{document}
