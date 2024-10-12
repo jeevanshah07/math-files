@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{Jeevan Shah}
+\fancyhead[C]{Second-Order Recurrence Relations}
+\fancyhead[R]{\today}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\begin{document}
+\begin{definition}
+  Given a second-order linear homogenous recurrence relation with constant coefficients:
+  \[
+    a_k = Aa_{k-1} + Ba_{k-1} \hspace{0.1in} \forall k \in \mathbb{Z}\left(k \geq 2\right)
+  \] 
+  the \textbf{characteristic equation of the relation} is 
+  \[
+    t^2 - At - B = 0
+  \]
+\end{definition}
+
+\begin{lemma}
+  Let $A$ and $B$ be real numbers. A recurrence relation of the form 
+  \[ a_k = Aa_{k-1} + Ba_{k-2} \hspace{0.1in} \forall k \in \mathbb{Z}\left(k\geq 2\right)\] 
+  is satisfied by the sequence 
+  \[ 1, t, t^2, t^3, \ldots, t^n, \ldots \] 
+  where $t$ is a nonzero real number, if, and only if, $t$ satisfies the equation 
+  \[ t^2 - At - B = 0 \]
+\end{lemma}
+\begin{lemma}
+  If $r_0, r_1, r_2, \ldots$ and $s_0, s_1, s_2, \ldots$ are sequences that satify the same second-order linear homogenous recurrence relation with constant coefficients, and if $C$ and $D$ are \emph{any} numbers, then the sequence $a_0, a_1, a_2, \ldots$ defined by the formula 
+  \[
+    a_n = Cr_n + Ds_n \hspace{0.1in} \forall n \in \mathbb{Z}^{nonneg}
+  \]
+  also satisfies the same recurrence relation
+\end{lemma}
+
+\begin{lemma}
+  Let $A$ and $B$ be real numbers and suppose that the characteristic equation 
+  \[
+   t^2 - At - B = 0 
+  \]
+  has a single root $r$. Then the sequences $1, r^1, r^2, r^3, \ldots, r^n, \ldots$ and $0, r, 2r^2, 3r^3, \ldots, nr^n, \ldots$ both satisfy the recurrence relation 
+  \[
+    a_k = Aa_{k-1} + Ba_{k-2} \hspace{0.1in} \forall n \in \mathbb{Z}\left(n \geq 2\right)
+  \]
+\end{lemma}
+
+\begin{theorem}[Single-Root Theorem]
+  Suppose a sequence $a_0, a_1, a_2, \ldots$ satisfies a recurrence relation 
+  \[a_k = Aa_{k-1} + Ba_{k-2}\] 
+  for some real numbers $A$ and $B$ with $B \neq 0$ and $\forall k \in \mathbb{Z}\left(k \geq 2\right)$. If the characteristic equation $t^2 - At - B = 0$ has a single (real) root $r$, then $a_0, a_1, a_2, \ldots$ is given by the explicit formula 
+  \[a_n = Cr^{n} + Dnr^{n}\]
+  where $C$ and $D$ are the real numbers whose values are determined by the values of $a_0$ and any other known value of the sequence
+\end{theorem}
+
+\begin{proof}
+  Suppose for some real numbers $A$ and $B$, a sequence $a_0, a_1, a_2, \ldots$ satisfies the recurrence relation $a_k = Aa_{k-1} + Ba_{k-2} \hspace{0.1in} \forall k \in \mathbb{Z}\left(k\geq 2\right)$, and suppose the characteristic equation $t^2-At-B=0$ has one distinct root $r$. We will show that 
+  \[
+    \forall n \in \mathbb{Z}^{nonneg}, \hspace{0.1in} a_n = Cr^n + Dnr^n
+  \]
+  where $C$ and $D$ are numbers such that \\
+  \[
+    a_0 = Cr^{0} + D(0)r^{0} = C \hspace{0.2in} \text{and} \hspace{0.2in} a_1 = Cr^{1} + D(1)r^{1} = Cr + Dr
+  \]
+  Let $P(n)$ be the equation 
+  \[
+    a_n = Cr^{n} + Dnr^{n} 
+  \]
+  We use strong mathematical induction to prove that $P(n)$ is true for all integers $n \geq 0$. In the basis step, we prove that $P(0)$ and $P(1)$ are true. We do this because in the inductive step we need the equation to hold for $n=0$ and $n=1$ in order to prove that it holds for $n=1$
+
+  \textbf{Show that $P(0)$ and $P(1)$ are true:} The truth of $P(0)$ and $P(1)$ is automatic because $C$ and $D$ are exactly those numbers that make the follwing equations true:
+  \[
+    a_0 = Cr^{0} + D(0)r^{0} = C \hspace{0.2in} \text{and} \hspace{0.2in} a_1 = Cr^{1} + D(1)r^{1} = Cr + Dr
+  \]
+
+  \textbf{Show that for all integers $k\geq 1$, if $P(i)$ is true for all integers $i$ from $0$ through $k$, then $P(k+1)$ is also true:} Suppose that $k\geq 1$ and for all integers $i$ from $0$ through $k$, 
+  \[ a_i = Cr^{i} + Dir^{i}\] 
+  We must show that 
+  \[ a_{k+1} = Cr^{k+1} + D\left(k+1\right)r^{k+1}\]
+  Now by the inductive hypothesis, 
+  \[ a_k = Cr^{k} + Dkr^{k} \hspace{0.2in} \text{and} \hspace{0.2in} a_{k-1} = Cr^{k-1} + D\left(k-1\right)r^{k-1} \]
+  so 
+  \begin{align*}
+    a_{k+1} &= Aa_{k} + Ba_{k-1} \tag{by definition of $a_0, a_1, a_2, \ldots$} \\ 
+    &= A\left(Cr^{k} + Dkr^{k}\right) + B\left(Cr^{k-1} + D\left(k-1\right)r^{k-1}\right) \tag{by inductive hypothesis}\\ 
+    &= C\left(Ar^{k} + Bkr^{k}\right) + D\left(Akr^{k} + B\left(k-1\right)r^{k-1}\right) \tag{by combining like terms} \\ 
+    &= Cr^{k+1} + D\left(k+1\right)r^{k+1} \tag{by Lemma 1}
+  \end{align*}
+  This was what was to be shown. 
+
+\end{proof}
+\begin{remark}
+  The reason the last equality follows from Lemma 2 is that since $r$ satisfies the characteristic equation and is the only root of it, the sequences $1, r^{1}, r^{2}, r^{3}, \ldots, r^{n}, \ldots$ and $0, r, 2r^{2}, 3r^{3}, \ldots, nr^{n}, \ldots$ satify the recurrence relation
+\end{remark}
+\end{document}
