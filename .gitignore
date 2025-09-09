@@ -1,5 +1,9 @@
 *.aux
+.DS_Store
 *.fls
 *.log
 *.fdb_latexmk
+apbc/*
+!apbc/*.pdf
+!apbc/*.tex
 .config/
