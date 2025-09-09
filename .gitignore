@@ -4,6 +4,6 @@
 *.log
 *.fdb_latexmk
 apbc/*
-!apbc/*.pdf
-!apbc/*.tex
+!apbc/pdfs
+!apbc/code
 .config/
